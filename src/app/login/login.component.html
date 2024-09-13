@@ -1,0 +1,25 @@
+<div class="login-container">
+  <div class="card-outer-container">
+    <div class="card-header">
+      <a href="/">
+        <img src="marca-logo.svg" />
+      </a>
+    </div>
+    <div class="card">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="card-container">
+          <div class="form-group">
+            <label for="username"><strong i18n>Usuario</strong></label>
+            <input type="text" formControlName="username" />
+          </div>
+          <div class="form-group">
+            <label for="password"><strong i18n>Contraseña</strong></label>
+            <input type="password" formControlName="password" />
+          </div>
+
+          <button type="submit" [disabled]="!form.valid" i18n>Confirmar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+.card {
+  transition: 0.3s;
+  box-sizing: border-box;
+  background: #f5f7fa;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+
+.container {
+  padding: 2px 4px;
+
+  &-horizontal {
+    flex: 60%;
+  }
+
+  &-vertical {
+    flex: 65%;
+  }
+
+  &-square {
+    flex: 20%;
+  }
+}
+
+.image {
+  &-horizontal {
+    flex: 40%;
+  }
+
+  &-vertical {
+    flex: 35%;
+  }
+
+  &-square {
+    flex: 80%;
+  }
+}
+
+span {
+  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+}
+
+.card-title {
+  color: #121212;
+
+  &-small {
+    font-weight: 600;
+    font-size: 19px;
+  }
+
+  &-big {
+    font-size: 40px;
+    font-weight: 800;
+  }
+}
+
+.card-author {
+  line-height: 0.75rem;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.small-card {
+  &-horizontal {
+    width: 335px;
+    height: 175px;
+    flex-direction: row-reverse;
+  }
+
+  &-vertical {
+    width: 224px;
+    height: 321px;
+    flex-direction: column;
+  }
+
+  &-square {
+    width: 335px;
+    height: 255px;
+    flex-direction: column;
+  }
+}
+
+.big-card {
+  &-horizontal {
+    width: 671px;
+    height: 215px;
+    flex-direction: row-reverse;
+  }
+
+  &-vertical {
+    width: 251px;
+    height: 577px;
+    flex-direction: column;
+  }
+
+  &-square {
+    width: 670px;
+    height: 510px;
+    flex-direction: column;
+  }
+}

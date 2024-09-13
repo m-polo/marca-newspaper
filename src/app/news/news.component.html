@@ -1,0 +1,11 @@
+<div class="card {{ cardSize }}-card-{{ cardShape }}" (click)="onClick(title)">
+  <img class="image-{{ cardShape }}" src="{{ imagePath }}" />
+  <div class="container-{{ cardShape }}">
+    <span i18n class="card-title-{{ cardSize }}">
+      {{ title }}
+    </span>
+    <br />
+
+    <span class="card-author">{{ author | uppercase }}</span>
+  </div>
+</div>

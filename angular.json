@@ -19,6 +19,7 @@
       },
       "root": "",
       "sourceRoot": "src",
+      "i18n": { "sourceLocale": "es", "locales": {"en": { "translation": "./messages-en.xlf", "baseHref": "/en/"}}},
       "prefix": "app",
       "architect": {
         "build": {
@@ -28,7 +29,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
@@ -44,6 +46,9 @@
             "scripts": []
           },
           "configurations": {
+            "en": {
+              "localize": ["en"]
+            },
             "production": {
               "budgets": [
                 {
@@ -70,6 +75,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "en": {
+              "buildTarget": "marca-newspaper:build:en"
+            }, 
             "production": {
               "buildTarget": "marca-newspaper:build:production"
             },
@@ -81,27 +89,6 @@
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "less",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.less"
-            ],
-            "scripts": []
-          }
         }
       }
     }

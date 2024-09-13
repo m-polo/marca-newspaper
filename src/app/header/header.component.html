@@ -1,0 +1,62 @@
+<div class="header-container">
+  <div class="logo-container">
+    <div class="left-column">
+      <a
+        href="https://www.marca.com/multimedia/primeras/{{ year }}/{{
+          month
+        }}/{{ month }}{{
+          day
+        }}.html?intcmp=BOTONPORTADA&amp;s_kw=portada-del-dia"
+        i18n-title
+        title="Portada"
+      >
+        <img src="portada-de-hoy.jpg" alt="Portada" />
+        <strong i18n>La portada de hoy</strong>
+      </a>
+      <a
+        class="center-element"
+        href="https://www.marca.com/radio.html?intcmp=BOTONPORTADA&amp;s_kw=radiomarca"
+      >
+        <img src="radio-marca.svg" />
+        <strong>Radio MARCA</strong></a
+      >
+      <a href="https://cuidateplus.marca.com" title="CuídatePlus.com">
+        <img src="cuidateplus.svg" alt="Cuidateplus.com" />
+        <strong>CuídatePlus</strong>
+      </a>
+    </div>
+    <div class="center-column">
+      <a href="/">
+        <img src="marca-logo.svg" />
+      </a>
+    </div>
+    <div class="right-column">
+      <button type="button" i18n>
+        <p><span>{{time | date:'mediumTime'}}</span> <span> {{temperature}}º</span></p>
+      </button>
+      <button type="menu" class="left-button">
+        <img src="spain.svg" /><span>ES</span>
+      </button>
+      <button *userLogged type="button" class="center-button" i18n>Suscribete</button>
+      <button
+        *ngIf="currentContext.userLogged === false; else closeSession"
+        type="button"
+        class="right-button"
+        routerLink="login"
+        i18n
+      >
+        Iniciar sesión
+      </button>
+      <ng-template #closeSession>
+        <button
+          type="button"
+          class="right-button"
+          (click)="logOut()"
+          i18n
+        >
+          Cerrar sesión
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</div>

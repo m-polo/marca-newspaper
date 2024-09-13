@@ -1,0 +1,102 @@
+<div class="main-container">
+  <div class="row">
+    <div class="column-60">
+      <app-news
+        imagePath="lamin.jpg"
+        title="No tengo posibilidades de ganar el Balon de Oro"
+        author="Carlos Carpio"
+        [cardShape]="CardShape.SQUARE"
+        [cardSize]="CardSize.BIG"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+    </div>
+
+    <div class="column-30">
+      <app-news
+        imagePath="carvajal.jpg"
+        title="Carvajal: 'Quiero renovar'"
+        author="P. Polo"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.SMALL"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+
+      <app-news
+        imagePath="entreno.jpg"
+        title="El Madrid blinda a su joya"
+        author="J. L. Calderon"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.SMALL"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+
+      <app-news
+        imagePath="jovenes.jpg"
+        title="Lo que preocupa en el Real Madrid"
+        author="Carlos Carpio"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.SMALL"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="column-60">
+      <app-news
+        imagePath="camisetas.png"
+        title="Asi quedan los dorsales de los 20 equipos de Primera"
+        author="Carlos Carpio"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.BIG"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="column-20">
+      <app-news
+        imagePath="camp-nou.jpg"
+        title="Lio con las obras del Camp Nou"
+        author="C. Navarro"
+        [cardShape]="CardShape.VERTICAL"
+        [cardSize]="CardSize.BIG"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+    </div>
+
+    <div class="column-30">
+      <app-news
+        imagePath="champions-league.jpg"
+        title="La IA 'simula' la nueva Champions: ya tiene campeón y no es el Madrid"
+        author="Rodrigo Gonzalez"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.SMALL"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+
+      <app-news
+        imagePath="tebas.jpg"
+        title="Los nueve equipos de LaLiga que tienen excedido el límite salarial"
+        author="Manuel Malagon"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.SMALL"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+
+      <app-news
+        imagePath="salarios.jpg"
+        title="Los límites salariales: el Madrid arrasa, mejoría insuficiente del Barça y drama en el Sevilla"
+        author="Manuel Malagon"
+        [cardShape]="CardShape.HORIZONTAL"
+        [cardSize]="CardSize.SMALL"
+        (newsSeen)="onNewsSeen($event)"
+      ></app-news>
+    </div>
+  </div>
+</div>

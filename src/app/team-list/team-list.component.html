@@ -1,0 +1,12 @@
+<div class="teamList-container">
+    <div *ngFor="let team of teamList; index">
+  <a class="team"
+    
+    href="https://www.marca.com/futbol/{{
+      team.fileName
+    }}.html?intcmp=MENUESCU&s_kw={{ team.fileName | characterRemover: '-'}}"
+  >
+    <img src="{{ team.fileName }}.png" i18n-alt alt="Noticias del {{ team.name }}" />
+  </a>
+</div>
+</div>

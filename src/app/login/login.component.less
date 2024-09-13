@@ -1,0 +1,79 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}
+
+.card-outer-container {
+  width: 470px;
+  height: 230px;
+}
+
+.card-header {
+  padding: 12px;
+  align-self: flex-start;
+
+  a > img {
+    height: 18px;
+    width: 65px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 470px;
+  height: 200px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.form-group {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+input {
+  flex: 70%;
+  height: 30px;
+}
+
+label {
+  flex: 10%;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+}
+
+button {
+  height: 40px;
+  width: 80%;
+  background-color: #0465c8;
+  color: white;
+  margin: 10px 0px 32px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #0465c8;
+  border-radius: 2px;
+
+  &:disabled {
+    background-color: gray;
+  }
+
+  &:enabled {
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}
